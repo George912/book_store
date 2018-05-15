@@ -56,4 +56,15 @@ public class Book {
     public void setNumber(String number) {
         this.number = number;
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Book{");
+        sb.append("title='").append(title).append('\'');
+        sb.append(", price=").append(price);
+        sb.append(", description='").append(description).append('\'');
+        sb.append(", number='").append(number).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }
