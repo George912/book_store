@@ -13,10 +13,15 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, Float price, String description, String number) {
+    public Book(String title, Float price, String description) {
+        this();
         this.title = title;
         this.price = price;
         this.description = description;
+    }
+
+    public Book(String title, Float price, String description, String number) {
+        this(title, price,description);
         this.number = number;
     }
 

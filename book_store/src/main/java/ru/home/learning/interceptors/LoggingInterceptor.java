@@ -1,5 +1,11 @@
 package ru.home.learning.interceptors;
 
+import ru.home.learning.interceptors.bindings.Loggable;
+
+import javax.inject.Inject;
+import javax.interceptor.AroundInvoke;
+import javax.interceptor.Interceptor;
+import javax.interceptor.InvocationContext;
 import java.util.logging.Logger;
 
 /**

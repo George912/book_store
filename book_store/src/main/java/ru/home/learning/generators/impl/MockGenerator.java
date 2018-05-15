@@ -1,7 +1,11 @@
 package ru.home.learning.generators.impl;
 
 import ru.home.learning.generators.api.NumberGenerator;
+import ru.home.learning.interceptors.bindings.Loggable;
+import ru.home.learning.qualifiers.ThirteenDigits;
 
+import javax.enterprise.inject.Alternative;
+import javax.inject.Inject;
 import java.util.Random;
 import java.util.logging.Logger;
 

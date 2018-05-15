@@ -1,5 +1,6 @@
 package ru.home.learning.interceptors.bindings;
 
+import javax.interceptor.InterceptorBinding;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 

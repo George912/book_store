@@ -1,5 +1,7 @@
 package ru.home.learning;
 
+import org.jboss.weld.environment.se.Weld;
+import org.jboss.weld.environment.se.WeldContainer;
 import ru.home.learning.models.Book;
 import ru.home.learning.services.BookService;
 
