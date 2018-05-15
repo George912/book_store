@@ -3,6 +3,7 @@ package ru.home.learning.generators.impl;
 import ru.home.learning.generators.api.NumberGenerator;
 
 import java.util.Random;
+import java.util.logging.Logger;
 
 /**
  * Имитационный генератор чисел, применяемый
