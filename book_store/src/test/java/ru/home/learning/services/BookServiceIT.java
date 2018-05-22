@@ -5,6 +5,9 @@ import org.jboss.weld.environment.se.WeldContainer;
 import org.junit.Test;
 import ru.home.learning.models.Book;
 
+import javax.inject.Inject;
+import java.util.logging.Logger;
+
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -17,7 +20,7 @@ public class BookServiceIT {
         Weld weld = new Weld();
         WeldContainer container = weld.initialize();
         BookService service = container.instance().select(BookService.class).get();
-        Book book = service.createBook("H2G2", 12.5f, "Изучаем Java EE 7");
+        Book book = service.createBook("H2G2", 12.5f, "Learn Java EE 7");
         assertTrue(book.getNumber().startsWith("MOCK"));
         weld.shutdown();
     }

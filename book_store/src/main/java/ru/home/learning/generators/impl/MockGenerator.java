@@ -24,7 +24,7 @@ public class MockGenerator implements NumberGenerator {
     @Loggable
     public String generateNumber() {
         String mock = "MOCK-" + Math.abs(new Random().nextInt());
-        logger.info("Сгенерирован Mock : " + mock);
+        logger.info("Generate Mock : " + mock);
         return mock;
     }
 }
