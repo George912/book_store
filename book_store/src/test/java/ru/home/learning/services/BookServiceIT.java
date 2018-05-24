@@ -5,9 +5,6 @@ import org.jboss.weld.environment.se.WeldContainer;
 import org.junit.Test;
 import ru.home.learning.models.Book;
 
-import javax.inject.Inject;
-import java.util.logging.Logger;
-
 import static org.junit.Assert.assertTrue;
 
 /**
