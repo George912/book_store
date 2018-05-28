@@ -1,4 +1,4 @@
-package ru.home.learning.constraints;
+package ru.home.learning.validation.constraints;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -25,7 +25,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER})
 @Retention(RUNTIME)
 public @interface Email {
-    String message() default "{ru.home.learning.constraints.Email.message}";
+    String message() default "{ru.home.learning.validation.constraints.Email.message}";
 
     Class<?>[] groups() default {};
 
