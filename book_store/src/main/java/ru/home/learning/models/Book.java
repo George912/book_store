@@ -1,28 +1,62 @@
 package ru.home.learning.models;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 /**
  * POJO-объект "Книга"
  * Created by YANesterov on 15.05.2018.
  */
+@Entity
+@NamedQueries({
+        @NamedQuery(name = "findAllBooks", query = "SELECT b FROM Book b"),
+        @NamedQuery(name = "findBookH2G2", query = "SELECT b FROM Book b WHERE b.title='H2G2'")
+})
 public class Book {
+    @Id
+    @GeneratedValue
+    private Long id;
+    @NotNull
     private String title;
     private Float price;
+    @Size(min = 10, max = 2000)
     private String description;
-    private String number;
+    private String isbn;
+    private Integer nbOfPage;
+    private Boolean illustrations;
 
     public Book() {
     }
 
-    public Book(String title, Float price, String description) {
+    public Book(String title) {
         this();
         this.title = title;
+    }
+
+    public Book(String title, Float price) {
+        this(title);
         this.price = price;
+    }
+
+    public Book(String title, Float price, String description) {
+        this(title, price);
         this.description = description;
     }
 
-    public Book(String title, Float price, String description, String number) {
-        this(title, price,description);
-        this.number = number;
+    public Book(String title, Float price, String description, String isbn) {
+        this(title, price, description);
+        this.isbn = isbn;
+    }
+
+    public Book(String title, Float price, String description, String isbn, Integer nbOfPage) {
+        this(title, price, description, isbn);
+        this.nbOfPage = nbOfPage;
+    }
+
+    public Book(String title, Float price, String description, String isbn, Integer nbOfPage, Boolean illustrations) {
+        this(title, price, description, isbn, nbOfPage);
+        this.illustrations = illustrations;
     }
 
     public String getTitle() {
@@ -49,21 +83,48 @@ public class Book {
         this.description = description;
     }
 
-    public String getNumber() {
-        return number;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getNbOfPage() {
+        return nbOfPage;
+    }
+
+    public void setNbOfPage(Integer nbOfPage) {
+        this.nbOfPage = nbOfPage;
+    }
+
+    public Boolean getIllustrations() {
+        return illustrations;
+    }
+
+    public void setIllustrations(Boolean illustrations) {
+        this.illustrations = illustrations;
     }
 
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Book{");
-        sb.append("title='").append(title).append('\'');
+        sb.append("id=").append(id);
+        sb.append(", title='").append(title).append('\'');
         sb.append(", price=").append(price);
         sb.append(", description='").append(description).append('\'');
-        sb.append(", number='").append(number).append('\'');
+        sb.append(", isbn='").append(isbn).append('\'');
+        sb.append(", nbOfPage=").append(nbOfPage);
+        sb.append(", illustrations=").append(illustrations);
         sb.append('}');
         return sb.toString();
     }

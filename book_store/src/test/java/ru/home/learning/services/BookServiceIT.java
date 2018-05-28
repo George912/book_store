@@ -18,7 +18,7 @@ public class BookServiceIT {
         WeldContainer container = weld.initialize();
         BookService service = container.instance().select(BookService.class).get();
         Book book = service.createBook("H2G2", 12.5f, "Learn Java EE 7");
-        assertTrue(book.getNumber().startsWith("MOCK"));
+        assertTrue(book.getIsbn().startsWith("MOCK"));
         weld.shutdown();
     }
 }
