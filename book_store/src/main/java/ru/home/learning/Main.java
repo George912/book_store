@@ -1,9 +1,11 @@
 package ru.home.learning;
 
-import org.jboss.weld.environment.se.Weld;
-import org.jboss.weld.environment.se.WeldContainer;
 import ru.home.learning.models.Book;
-import ru.home.learning.services.BookService;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 
 /**
  * Точка входа
@@ -11,11 +13,14 @@ import ru.home.learning.services.BookService;
  */
 public class Main {
     public static void main(String[] args) {
-        Weld weld = new Weld();
-        WeldContainer container = weld.initialize();
-        BookService bookService = container.instance().select(BookService.class).get();
-        Book book = bookService.createBook("H2G2", 12.5f, "Изучаем Java EE 7");
-        System.out.println(book);
-        weld.shutdown();
+        Book book = new Book("H2G2", 12.5f, "Learn Java EE 7", "1-84023-742-2", 354, false);
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("demoPU");
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.persist(book);
+        tx.commit();
+        em.close();
+        emf.close();
     }
 }
