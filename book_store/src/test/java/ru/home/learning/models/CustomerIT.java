@@ -27,7 +27,7 @@ public class CustomerIT {
     }
 
     @After
-    public static void close() {
+    public void close() {
         validatorFactory.close();
     }
 

@@ -1,5 +1,7 @@
 package ru.home.learning.models;
 
+import ru.home.learning.validation.constraints.ZipCode;
+
 import javax.validation.constraints.NotNull;
 
 /**
