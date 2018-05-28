@@ -1,6 +1,7 @@
 package ru.home.learning.validation.validators;
 
 import ru.home.learning.qualifiers.USA;
+import ru.home.learning.validation.checkers.ZipCodeChecker;
 import ru.home.learning.validation.constraints.ZipCode;
 
 import javax.inject.Inject;
