@@ -17,9 +17,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * Created by YANesterov on 24.05.2018.
  */
 @Size(min = 7)
-@Pattern(regexp = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\\\." +
-        "[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*" +
-        "@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
+@Pattern(regexp = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
 @ReportAsSingleViolation
 @Constraint(validatedBy = {})
 @Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER})
