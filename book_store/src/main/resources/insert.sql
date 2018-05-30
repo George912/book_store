@@ -3,4 +3,4 @@ VALUES (1000, 'Изучаем JAVA EE 6','Лучшая книга о JAVA EE', 1
 INSERT INTO BOOK(ID, TITLE, DESCRIPTION, ILLUSTRATIONS, ISBN, NBOFPAGE, PRICE)
 VALUES (1001, 'Изучаем Java EE 7', 'Нет, это лучшая', 1, '5678-9012', 550, 53);
 INSERT INTO BOOK(ID, TITLE, DESCRIPTION, ILLUSTRATIONS, ISBN, NBOFPAGE, PRICE)
-VALUES (1010, 'Властелин колец', 'Одно кольцо для управления всеми остальными', 0, '9012-3456', 222, 23);
+VALUES (1010, 'Властелин колец', 'Одно кольцо для упрgit авления всеми остальными', 0, '9012-3456', 222, 23);
