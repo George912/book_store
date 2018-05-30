@@ -44,7 +44,7 @@ public class CustomerIT {
         Set<ConstraintViolation<Customer>> violations = validator.validate(customer);
         assertEquals(1, violations.size());
         assertEquals("invalid email address", violations.iterator().next().getMessage());
-        assertEquals("dummy", violations.iterator().next().getInvalidValue());
+        assertEquals("DummyEmail", violations.iterator().next().getInvalidValue());
         assertEquals("{ru.home.learning.validation.constraints.Email.message}", violations.iterator().next().getMessageTemplate());
     }
 }

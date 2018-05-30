@@ -1,3 +1,10 @@
 .idea
 book_store.iml
 target/
+
+#jpa
+demoPUCreate.ddl
+demoPUDrop.ddl
+create.sql
+derby.log
+drop.sql

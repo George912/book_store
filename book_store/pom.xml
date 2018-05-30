@@ -21,7 +21,7 @@
         <!--<version.jersey>2.22.2</version.jersey>-->
         <version.eclipselink>2.6.2</version.eclipselink>
         <version.hibernate.validator>5.0.0.Final</version.hibernate.validator>
-        <!--<version.el>3.0.1-b03</version.el>-->
+        <version.el>3.0.1-b03</version.el>
         <!--<version.json>1.0.4</version.json>-->
 
         <!-- Databases -->
@@ -83,11 +83,11 @@
         </dependency>
 
         <!-- EL -->
-        <!--<dependency>-->
-        <!--<groupId>org.glassfish</groupId>-->
-        <!--<artifactId>javax.el</artifactId>-->
-        <!--<version>${version.el}</version>-->
-        <!--</dependency>-->
+        <dependency>
+        <groupId>org.glassfish</groupId>
+        <artifactId>javax.el</artifactId>
+        <version>${version.el}</version>
+        </dependency>
 
         <!-- JPA -->
         <dependency>
