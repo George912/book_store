@@ -23,8 +23,9 @@
         <version.hibernate.validator>5.0.0.Final</version.hibernate.validator>
         <!--<version.el>3.0.1-b03</version.el>-->
         <!--<version.json>1.0.4</version.json>-->
+
         <!-- Databases -->
-        <!--<version.derby>10.10.1.1</version.derby>-->
+        <version.derby>10.10.1.1</version.derby>
         <!--<version.mysql>5.1.21</version.mysql>-->
         <!-- Test -->
         <skipTests>false</skipTests>
@@ -33,6 +34,7 @@
         <version.junit>4.11</version.junit>
         <version.xmlunit>1.4</version.xmlunit>
         <version.mockito>1.9.5</version.mockito>
+
         <!-- Maven Plugins -->
         <version.maven.jar.plugin>2.4</version.maven.jar.plugin>
         <version.maven.war.plugin>2.4</version.maven.war.plugin>
@@ -100,17 +102,17 @@
         </dependency>
 
         <!-- Derby -->
-        <!--<dependency>-->
-        <!--<groupId>org.apache.derby</groupId>-->
-        <!--<artifactId>derby</artifactId>-->
-        <!--<version>${version.derby}</version>-->
-        <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.apache.derby</groupId>-->
-        <!--<artifactId>derbyclient</artifactId>-->
-        <!--<version>${version.derby}</version>-->
-        <!--</dependency>-->
+        <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derby</artifactId>
+        <version>${version.derby}</version>
+        <scope>test</scope>
+        </dependency>
+        <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbyclient</artifactId>
+        <version>${version.derby}</version>
+        </dependency>
 
         <!-- MySQL -->
         <!--<dependency>-->

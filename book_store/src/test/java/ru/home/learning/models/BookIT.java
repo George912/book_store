@@ -18,7 +18,7 @@ import static org.junit.Assert.assertNotNull;
  * Created by YANesterov on 28.05.2018.
  */
 public class BookIT {
-    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("demoPU");
+    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("demoTestPU");
     private EntityManager em;
     private EntityTransaction tx;
 
