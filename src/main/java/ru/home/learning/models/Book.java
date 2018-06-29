@@ -3,24 +3,25 @@ package ru.home.learning.models;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
 /**
  * POJO-объект "Книга"
  * Created by YANesterov on 15.05.2018.
  */
 @Entity
-@NamedQueries({
-        @NamedQuery(name = "findAllBooks", query = "SELECT b FROM Book b"),
-        @NamedQuery(name = "findBookH2G2", query = "SELECT b FROM Book b WHERE b.title='H2G2'")
-})
-public class Book {
+@NamedQuery(name = "FIND_ALL", query = "SELECT b FROM Book b")
+public class Book implements Serializable {
+    public static final String FIND_ALL = "Book.findAllBooks";
     @Id
     @GeneratedValue
     private Long id;
     @NotNull
+    @Column(nullable = false)
     private String title;
     private Float price;
-    @Size(min = 10, max = 2000)
+    @Size(max = 2000)
+    @Column(length = 2000)
     private String description;
     private String isbn;
     private Integer nbOfPage;
