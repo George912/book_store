@@ -3,6 +3,7 @@ package ru.home.learning.components.interfaces;
 import ru.home.learning.models.Book;
 
 import javax.ejb.Remote;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -25,9 +26,10 @@ public interface BookEJBRemote {
      * @param book объект типа Book
      * @return объект типа Book
      */
-    Book createBook(Book book);
+    @NotNull
+    Book createBook(@NotNull Book book);
 
-    void deleteBook(Book book);
+    void deleteBook(@NotNull Book book);
 
     /**
      * Принимает отдельные объекты типа Book (которые не могут иметь
@@ -38,5 +40,5 @@ public interface BookEJBRemote {
      * @param book объект типа Book
      * @return объект типа Book
      */
-    Book updateBook(Book book);
+    @NotNull Book updateBook(@NotNull Book book);
 }

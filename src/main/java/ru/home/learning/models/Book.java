@@ -10,7 +10,7 @@ import java.io.Serializable;
  * Created by YANesterov on 15.05.2018.
  */
 @Entity
-@NamedQuery(name = "FIND_ALL", query = "SELECT b FROM Book b")
+@NamedQuery(name = "Book.findAllBooks", query = "SELECT b FROM Book b")
 public class Book implements Serializable {
     public static final String FIND_ALL = "Book.findAllBooks";
     @Id

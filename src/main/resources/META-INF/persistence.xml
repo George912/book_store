@@ -8,6 +8,7 @@
     <persistence-unit name="demoPU" transaction-type="JTA">
         <jta-data-source>java:global/jdbc/demoPUDS</jta-data-source>
         <properties>
+            <property name="eclipselink.canonicalmodel.subpackage" value="main"/>
             <property name="eclipselink.target-database" value="DERBY"/>
             <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
             <property name="eclipselink.logging.level" value="INFO"/>
@@ -18,6 +19,7 @@
     <persistence-unit name="demoTestPU" transaction-type="JTA">
         <jta-data-source>java:global:/jdbc/demoPUDS</jta-data-source>
         <properties>
+            <property name="eclipselink.canonicalmodel.subpackage" value="test"/>
             <property name="eclipselink.target-database" value="DERBY"/>
             <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
             <property name="eclipselink.logging.level" value="INFO"/>

@@ -1,6 +1,7 @@
 .idea
 book_store.iml
 target/
+demoPUDB/
 
 #jpa
 demoPUCreate.ddl
