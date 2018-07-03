@@ -6,7 +6,7 @@
              version="2.1">
     <!--main unit-->
     <persistence-unit name="demoPU" transaction-type="JTA">
-        <jta-data-source>java:global:/jdbc/demoPUDS</jta-data-source>
+        <jta-data-source>java:global/jdbc/demoPUDS</jta-data-source>
         <properties>
             <property name="eclipselink.target-database" value="DERBY"/>
             <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
